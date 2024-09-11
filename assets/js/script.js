@@ -83,6 +83,10 @@ function renderTaskList() {
     tasks.push(newTask);
     localStorage.setItem('tasks', JSON.stringify(tasks));
     renderTaskList();
+
+    form.reset();
+    $(form).removeClass('was-validated');
+    $('#formModal').modal('hide');
   }
   
   // Todo: create a function to handle deleting a task
